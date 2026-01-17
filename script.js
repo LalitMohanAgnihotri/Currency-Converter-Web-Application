@@ -16,7 +16,7 @@ window.convertCurrency = async function () {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data); // 👈 DEBUG LINE
+    console.log(data); 
 
     if (data.result !== "success") {
       result.innerText = `API Error: ${data["error-type"]}`;
@@ -27,17 +27,17 @@ window.convertCurrency = async function () {
     const rate = data.conversion_rates[currency];
 
     if (!rate) {
-      result.innerText = "❌ Invalid currency code";
+      result.innerText = "Invalid currency code";
       result.style.color = "red";
       return;
     }
 
-    result.innerText = `✅ ${amount} USD = ${(amount * rate).toFixed(2)} ${currency}`;
-    result.style.color = "#22c55e";
+    result.innerText = `${amount} USD = ${(amount * rate).toFixed(2)} ${currency}`;
+    result.style.color = "#1a1b1a";
 
   } catch (error) {
     console.error(error);
-    result.innerText = "⚠️ Network error";
+    result.innerText = "Network error";
     result.style.color = "red";
   }
 };
