@@ -4,7 +4,7 @@ window.convertCurrency = async function () {
   const result = document.getElementById("result");
 
   if (!amount || !currency) {
-    result.innerText = "❌ Please fill all fields";
+    result.innerText = "Please fill all fields";
     result.style.color = "red";
     return;
   }
