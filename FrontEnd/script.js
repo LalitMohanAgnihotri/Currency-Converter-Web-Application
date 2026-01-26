@@ -15,7 +15,7 @@ window.convertCurrency = async function () {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/convert?target=${currency}`
+      `https://currency-converter-web-application.onrender.com/convert?target=${currency}`
     );
     const data = await response.json();
 
