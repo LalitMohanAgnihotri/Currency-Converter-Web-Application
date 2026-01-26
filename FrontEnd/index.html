@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currency Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <div class="card">
+      <h1>💱 Currency Converter</h1>
+      <p class="subtitle">Real-time exchange rates</p>
+
+      <div class="field">
+        <label>Amount</label>
+        <div class="input-group">
+          <span class="prefix">$</span>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Convert to</label>
+        <select id="currency">
+          <option value="">Select currency</option>
+          <option value="INR">Indian Rupee (INR)</option>
+          <option value="USD">US Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+          <option value="GBP">British Pound (GBP)</option>
+          <option value="JPY">Japanese Yen (JPY)</option>
+          <option value="AUD">Australian Dollar (AUD)</option>
+          <option value="CAD">Canadian Dollar (CAD)</option>
+          <option value="CHF">Swiss Franc (CHF)</option>
+          <option value="CNY">Chinese Yuan (CNY)</option>
+        </select>
+      </div>
+
+      <button id="convertBtn" onclick="convertCurrency()">Convert</button>
+
+      <div id="result" class="result hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
